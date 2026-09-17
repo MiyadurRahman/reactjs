@@ -337,7 +337,8 @@ Distributed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Your Name**
+**Name:Meyadur Rahman**
+**Name:meyadurrahman777@gmail.com**
 
 ---
 
