@@ -1,10 +1,12 @@
 
 import './App.css'
+import Todo from './component/todo';
+import TOdo2 from './component/todo2';
 
 function App() {
   const array = ["miyad", "rakib", "ratul"]
 
-  function showMessage(){
+  function showMessage() {
     alert("button clicked");
   }
 
@@ -12,7 +14,21 @@ function App() {
     <>
 
 
+      {/* {importing component from another file} */}
+      <Todo task="learn react" isDone={true}></Todo>
+
+      {/* conditional component */}
+      <TOdo2 task1="learn javascript" IsDone={true}></TOdo2>
+      <TOdo2 task1="learn php" IsDone={false}></TOdo2>
+      <TOdo2 task1="learn python" IsDone={true}></TOdo2>
+      
+      
+      
       <h1>Get started</h1>
+      
+
+
+
       <Person></Person>
       <Sports></Sports>
       <Sports /> {/*i can also do this  */}
@@ -106,20 +122,20 @@ function User({ skills }) {
 
 
 //function props
-function Button({buttonclick}){
-return(
-<>
-<button onClick={buttonclick}>
-  click me
-</button>
+function Button({ buttonclick }) {
+  return (
+    <>
+      <button onClick={buttonclick}>
+        click me
+      </button>
 
 
 
 
-</>
+    </>
 
 
-)
+  )
 
 
 }
