@@ -2,7 +2,11 @@
 import './App.css'
 
 function App() {
+  const array = ["miyad", "rakib", "ratul"]
 
+  function showMessage(){
+    alert("button clicked");
+  }
 
   return (
     <>
@@ -15,11 +19,15 @@ function App() {
       <Student name="miyad" dep="cse"></Student>
       <Student name="siam" dep="EEE"></Student>
       <Student name="ratul" dep='pharmacy'></Student>
+      <Player name="rony" runs="100"></Player>
+      <Player name="Emad" ></Player>
 
-
+      <User skills={array}></User>
+      <Button buttonclick={showMessage} ></Button>
     </>
   )
 }
+
 
 //another component
 function Person() {
@@ -45,6 +53,9 @@ function Person() {
     </>
   )
 }
+
+
+
 function Sports() {
   const love = "football"
   return (
@@ -55,20 +66,96 @@ function Sports() {
     </>
   )
 }
+
+
+
+//props passed data from parrent to child
 function Student(props) {
-const stustyle={
-  color:'red',
-  padding:'20px'
-}
+  console.log(props);//showing in console
+  const stustyle = {
+    color: 'red',
+    padding: '20px'
+  }
   return (
     <div style={stustyle}>
-      <p>name: <span style={{color:"white"}}>{props.name}</span></p>
-      <p>department: <span style={{color:"white"}}>{props.dep}</span></p>
-      
+      <p>name: <span style={{ color: "white" }}>{props.name}</span></p>
+      <p>department: <span style={{ color: "white" }}>{props.dep}</span></p>
+
 
     </div>
 
   )
 }
 
+
+
+
+
+//array props
+function User({ skills }) {
+  return (
+    <ul>
+      {skills.map((skill) => (
+        <li key={skill}>{skill}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+
+
+//function props
+function Button({buttonclick}){
+return(
+<>
+<button onClick={buttonclick}>
+  click me
+</button>
+
+
+
+
+</>
+
+
+)
+
+
+}
+
+
+
+//destructuring
+// const { name,tech}={name: 'miyad', dep: 'cse'}
+// console.log(name);
+
+function Player({ name, runs = 0 }) {
+  return (
+
+    <div className="student">
+
+      <h3 style={{ color: 'red' }}>name: {name}</h3>
+      <p>runs : {runs}</p>
+
+
+    </div>
+
+
+
+
+
+
+
+  )
+
+
+
+}
+
+
+
+
+
 export default App
+
