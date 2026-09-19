@@ -1,5 +1,6 @@
 
 import './App.css'
+import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
 
@@ -12,16 +13,27 @@ function App() {
 
   return (
     <>
+     <h1>advance lists of users using map</h1>
+        {
+          array.map(name=> <Array></Array> )
+        }
 
+
+
+
+     <h1>component import form another file</h1>
 
       {/* {importing component from another file} */}
       <Todo task="learn react" isDone={true}></Todo>
-
+<h1> conditional redering 6 ways</h1>
       {/* conditional component */}
       <TOdo2 task1="learn javascript" IsDone={true}></TOdo2>
       <TOdo2 task1="learn php" IsDone={false}></TOdo2>
       <TOdo2 task1="learn python" IsDone={true}></TOdo2>
       
+      <Todo3 task2="eat" isdone={true}></Todo3>
+      <Todo3 task2="drink" isdone={false}></Todo3>
+      <Todo3 task2="workout" isdone={true}></Todo3>
       
       
       <h1>Get started</h1>
