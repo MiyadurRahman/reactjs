@@ -1,3 +1,3 @@
-export default function Array(){
-    return <li> name: </li>
+export default function UserItem({ name }){
+    return <li> name: {name}</li>
 }

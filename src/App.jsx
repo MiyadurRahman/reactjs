@@ -1,5 +1,6 @@
 
 import './App.css'
+import UserItem from './component/array.jsx';
 import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
@@ -15,7 +16,7 @@ function App() {
     <>
      <h1>advance lists of users using map</h1>
         {
-          array.map(name=> <Array></Array> )
+          array.map(name => <UserItem key={name} name={name} />)
         }
 
 
@@ -186,4 +187,3 @@ function Player({ name, runs = 0 }) {
 
 
 export default App
-
