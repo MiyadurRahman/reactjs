@@ -4,7 +4,7 @@ import UserItem, { Users } from './component/array.jsx';
 import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
-import Eventhandle from './component/eventhandle';
+import Eventhandle from './component/eventhandle.jsx';
 
 function App() {
   const array = ["miyad", "rakib", "ratul"]
@@ -12,7 +12,9 @@ function App() {
   function showMessage() {
     alert("button clicked");
   }
-
+function handleclick(){
+  alert("this is button")
+}
   return (
     <>
      <h1>advance lists of users using map</h1>
@@ -26,7 +28,7 @@ function App() {
 
     <h1>handle event when clicking button</h1>
 
-     <Eventhandle handleclick={showMessage}></Eventhandle>
+     <Eventhandle handle={handleclick}></Eventhandle>
 
 
 
