@@ -4,6 +4,7 @@ import UserItem, { Users } from './component/array.jsx';
 import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
+import Eventhandle from './component/eventhandle';
 
 function App() {
   const array = ["miyad", "rakib", "ratul"]
@@ -21,6 +22,11 @@ function App() {
 
      <h1>array of objects example</h1>
       <Users></Users>
+
+
+    <h1>handle event when clicking button</h1>
+
+     <Eventhandle handleclick={showMessage}></Eventhandle>
 
 
 
