@@ -5,6 +5,6 @@ if(IsDone=== true){
     return <li>Done:{task1}</li>
 }
 else{
-    return <li>do now: {task1}</li>
+    return <li>do it: {task1}</li>
 }
 }

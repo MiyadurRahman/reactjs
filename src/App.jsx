@@ -1,6 +1,6 @@
 
 import './App.css'
-import UserItem from './component/array.jsx';
+import UserItem, { Users } from './component/array.jsx';
 import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
@@ -18,6 +18,9 @@ function App() {
         {
           array.map(name => <UserItem key={name} name={name} />)
         }
+
+     <h1>array of objects example</h1>
+      <Users></Users>
 
 
 
