@@ -5,18 +5,22 @@ import Todo3 from './component/conditional_rendaring';
 import Todo from './component/todo';
 import TOdo2 from './component/todo2';
 import Eventhandle from './component/eventhandle.jsx';
+import { useState } from 'react';
 
 function App() {
+  
   const array = ["miyad", "rakib", "ratul"]
 
   function showMessage() {
     alert("button clicked");
   }
 function handleclick(){
-  alert("this is button")
+  
 }
   return (
     <>
+    <h1>starting state</h1>
+        <Count></Count>
      <h1>advance lists of users using map</h1>
         {
           array.map(name => <UserItem key={name} name={name} />)
@@ -66,6 +70,23 @@ function handleclick(){
       <Button buttonclick={showMessage} ></Button>
     </>
   )
+}
+//state
+
+function Count(){
+  const [count,setCount]=useState(0)
+  const handleadd=()=>{
+ let newvalue=count+1;
+ setCount(newvalue)
+  }
+  return <>
+  <h5>count:{count}</h5>
+  <button onClick={handleadd}>add</button>
+  
+  
+  
+  
+  </>
 }
 
 
