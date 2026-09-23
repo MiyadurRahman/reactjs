@@ -6,6 +6,7 @@ import Todo from './component/todo';
 import TOdo2 from './component/todo2';
 import Eventhandle from './component/eventhandle.jsx';
 import { useState } from 'react';
+import Hits from './component/countruns.jsx';
 
 function App() {
   
@@ -20,6 +21,7 @@ function handleclick(){
   return (
     <>
     <h1>starting state</h1>
+      <Hits></Hits>
         <Count></Count>
      <h1>advance lists of users using map</h1>
         {
