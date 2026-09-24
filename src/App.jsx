@@ -8,6 +8,7 @@ import Eventhandle from './component/eventhandle.jsx';
 import { useState } from 'react';
 import Hits from './component/countruns.jsx';
 
+
 function App() {
   
   const array = ["miyad", "rakib", "ratul"]
@@ -20,6 +21,7 @@ function handleclick(){
 }
   return (
     <>
+    <User></User>
     <h1>starting state</h1>
       <Hits></Hits>
         <Count></Count>
@@ -34,7 +36,7 @@ function handleclick(){
 
     <h1>handle event when clicking button</h1>
 
-     <Eventhandle handle={handleclick}></Eventhandle>
+      <Eventhandle handleclick={handleclick}></Eventhandle>
 
 
 
