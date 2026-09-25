@@ -157,7 +157,7 @@ function Student(props) {
 
 
 //array props
-function User({ skills }) {
+function User({ skills = [] }) {
   return (
     <ul>
       {skills.map((skill) => (
